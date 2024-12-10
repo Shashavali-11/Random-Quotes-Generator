@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "Arial", sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: linear-gradient(135deg, #4facfe, #00f2fe);
+          color: #333;
+        }
+  
+        .container {
+          background-color: #ffffff;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          width: 90%;
+          max-width: 600px;
+        }
+  
+        h1 {
+          color: #007bff;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+  
+        #qg {
+          font-size: 20px;
+          color: #555;
+          margin-bottom: 30px;
+          line-height: 1.5;
+          font-style: italic;
+          font-size: 40px;
+        }
+  
+        #btn {
+          padding: 12px 20px;
+          font-size: 16px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+  
+        #btn:hover {
+          background-color: #0056b3;
+        }
+  
+        @media (max-width: 768px) {
+          h1 {
+            font-size: 20px;
+          }
+  
+          #qg {
+            font-size: 20px;
+          }
+  
+          #btn {
+            padding: 10px 16px;
+            font-size: 14px;
+          }
+        }
+      </style>
+  </head>
+  <body>
+    <p id="qg">Quote Generation....</p>
+    <br><hr>
+    <button id="btn">Click to Generate Quotes</button>
+
+    <script>
+      const quotes = [
+        "The best way to predict the future is to invent it. - Alan Kay",
+        "Life is 10% what happens to us and 90% how we react to it. - Charles R. Swindoll",
+        "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+        "Be yourself; everyone else is already taken. - Oscar Wilde",
+        "Success is not the key to happiness. Happiness is the key to success. - Albert Schweitzer",
+        "The only limit to our realization of tomorrow is our doubts of today. - Franklin D. Roosevelt",
+        "Act as if what you do makes a difference. It does. - William James",
+        "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+        "Keep your face always toward the sunshine—and shadows will fall behind you. - Walt Whitman",
+        "You are never too old to set another goal or to dream a new dream. - C.S. Lewis",
+        "Believe you can and you're halfway there. - Theodore Roosevelt",
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "Happiness is not something ready-made. It comes from your own actions. - Dalai Lama",
+        "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+        "It does not matter how slowly you go as long as you do not stop. - Confucius",
+        "With the new day comes new strength and new thoughts. - Eleanor Roosevelt",
+        "In the middle of every difficulty lies opportunity. - Albert Einstein",
+        "What lies behind us and what lies before us are tiny matters compared to what lies within us. - Ralph Waldo Emerson",
+        "You miss 100% of the shots you don’t take. - Wayne Gretzky",
+        "Do what you can with all you have, wherever you are. - Theodore Roosevelt",
+        "The purpose of our lives is to be happy. - Dalai Lama",
+        "Start where you are. Use what you have. Do what you can. - Arthur Ashe",
+        "Hardships often prepare ordinary people for an extraordinary destiny. - C.S. Lewis",
+        "Don't let yesterday take up too much of today. - Will Rogers",
+        "You are braver than you believe, stronger than you seem, and smarter than you think. - A.A. Milne",
+        "Courage is resistance to fear, mastery of fear—not absence of fear. - Mark Twain",
+        "Keep going. Everything you need will come to you at the perfect time. - Unknown",
+        "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+        "Do what you feel in your heart to be right—for you'll be criticized anyway. - Eleanor Roosevelt",
+        "Opportunities don't happen. You create them. - Chris Grosser",
+        "The way to get started is to quit talking and begin doing. - Walt Disney",
+      ];
+
+      let qg = document.getElementById("qg");
+      let btn = document.getElementById("btn");
+
+      btn.addEventListener("click", quoteGenerator);
+      function quoteGenerator() {
+        let random = Math.floor(Math.random() * quotes.length);
+        qg.textContent = quotes[random];
+      }
+    </script>
+  </body>
+</html>
